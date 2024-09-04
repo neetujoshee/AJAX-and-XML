@@ -1,0 +1,32 @@
+<!--complex type:
+xs:sequence=the elements must appear in order specified
+xs:all=elements must appear, but order isnot important
+xs:choice=only one elements can appear -->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="employee">
+        <xs:complexType>
+            <xs:sequence>     
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="age" type="xs:integer"/>
+            </xs:sequence>
+            <xs:more>
+                <xs:element name="address" type="xs:string"/>
+                <xs:element name="phone" type="xs:string"/>
+            </xs:more>
+
+            <xs:choice>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="website" type="xs:string"/>
+            </xs:choice>
+        </xs:complexType>
+   </xs:element>
+
+   <!--xml doc-->
+   <employee>
+    <name>John</name>
+    <age>25</age>
+    <address> dhangadhi</address>
+    <phone>1231111</phone>
+    <email>joshi11</email>
+   </employee>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML schema</title>
+</head>
+<body>
+    <xs:element name="note"> <!-- defines the element name-->
+        <xs:complex type> <!-- the element "note" is of complex type-->
+            <xs:sequence> <!-- the complex type is a squence of element-->
+                <xs:element name="to" type="xs:string"/>   <!-- the element "to" is the type of text.-->
+                <xs:element name="from" type="xs:string"/>
+                <xs:element name="heading" type="xs:string"/>
+                <xs:element name="body" type="xs:string"/>
+            </xs:sequence>
+        </xs:complex>
+    </xs:element>
+<note> 
+    <to> nitu</to>
+    <from> namita</from>
+    <heading> baini miss you</heading>
+    <body> please bhetam na.</body>
+</note>
+</body>
+</html>

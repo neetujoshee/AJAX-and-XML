@@ -1,0 +1,37 @@
+<h1> INTERNAL DTD</h1>
+ <!--SYNTAX: <!DOCTYPE root-element[element-declaration]>-->
+ <!-- root element: name of the root
+ element-declaration: where you declare element. 
+ -->
+   <?xml version="1.0" encoding=UTF-8 standalone="yes"?> <!--standalone set to yes because declaration works independent of external source.-->
+  <!DOCTYPE address[
+  <!ELEMENT address (name,company,phone)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT company (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  ]>
+  <address> 
+    <name> nitu</name>
+    <company> VISUAL IT COMPANY</company>
+    <phone> 9863495926</phone>
+</address>
+
+<br> <br>
+
+<h1> EXTERNAL DTD</h1>
+<!--<H2><!DOCTYPE address SYSTEM "address.dtd">-->
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!-- set as no because the declaration includes from the external source-->
+     <!DOCTYPE adress SYSTEM "address.dtd">
+     <address>
+        <name> nitu</name>
+        <company> VISUAL IT COMPANY</company>
+        <phone> 9863495926</phone>
+     </address>
+
+     <!ELEMENT addres(name,phone,company)>
+     <!ELEMENT name=(#PCDATA)> 
+     <!ELEMENT phone=(#PCDATA)>
+     <!ELEMENT company=(#PCDATA)>
+</body>
+</html>
